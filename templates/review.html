@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Borel&family=Chewy&family=Knewave&family=Matemasie&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Wardrobe Wise</h1>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('member') }}">Review</a></li>
+        <li><a href="{{ url_for('select') }}">Selection</a></li>
+      </ul>
+    </div>
+
+    <!-- FORM -->
+
+    <div class="main">
+      <div class="hero">
+        <div class="container">
+          <div class="title">
+            <h1><b>Review Us</b></h1>
+          </div>
+          <form>
+            <!-- Personal Information Section -->
+            
+              <legend class="title"><b> Personal Information </b></legend>
+              <br />
+              <div class="style">
+  
+              <!-- Name -->
+              <label for="name"><b>Name</b></label><br>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your Fullname.."
+                required
+              /><br />
+  
+              <!-- Phone number -->
+              <label for="phone"><b>Phone number</b></label><br>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your contact No. here..."
+                required
+              /><br />
+  
+              <!-- Email -->
+              <label for="email"><b>Email</b></label><br>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your Email here..."
+                required
+              /><br />
+            
+          
+            <!-- Gender Selection -->
+            
+              <legend><b>Gender </b></legend><br>
+              <select name="gender" class="gender-select">
+                <option value="" class="hidden-option" disabled selected>Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            
+            <br />
+  
+            <!-- Services Section -->
+            
+              <legend><b>Experience </b></legend><br>
+              <!-- <br />
+              <label
+                >How would you describe your experience from the given
+                below:</label
+              ><br />
+              <input type="radio" id="5" value="5 star" />
+              <label for="5">Loved it!</label><br />
+              <input type="radio" id="4" value="4 star" />
+              <label for="4">Very Helpful!</label><br />
+              <input type="radio" id="3" value="3 star" />
+              <label for="3">Good but not worth it</label><br />
+              <input type="radio" id="2" value="2 star" />
+              <label for="2">Somewhat helpful</label><br />
+              <input type="radio" id="1" value="1 star" />
+              <label for="1">Not Satisfied/helpful</label><br /> -->
+              <p>How would you describe your experience from the given
+                below</p><br>
+              <select name="experience" class="experience-select">
+                <option value="" class="hidden-option" disabled selected>Experience</option>
+                <option value="1">Loved it!</option>
+                <option value="2">Very Helpful</option>
+                <option value="3">Good but not worth it</option>
+                <option value="4">Somewhat Helpful</option>
+                <option value="5">Not Satisfied</option>
+              </select>
+            
+            <br />
+  
+            <!-- Address Section -->
+  
+            <label for="address"><b>Message</b></label
+            ><br />
+            <textarea
+              id="address"
+              name="address"
+              rows="6"
+              cols="50"
+              placeholder="Anything else you would like us to add?"
+            ></textarea
+            ><br /><br />
+  
+            <!-- Action Buttons -->
+  
+            <button class="btn"><a type="savedata">Submit</a></button>
+            <button class="btn"><a type="reset">Reset</a></button>
+          </div>
+          </form>
+        
+        </div>
+      </div>
+        
+      </div>
+    </div>
+
+    <!-- FOOTER  -->
+
+    <div class="footer">
+      <h4>© 2025 All rights reserved.</h4>
+    </div>
+  </body>
+</html>

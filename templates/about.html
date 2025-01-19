@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Borel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+    <style>
+      .footer {
+        margin-top: -18px !important ;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+      <h1>Wardrobe Wise</h1>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('member') }}">Review</a></li>
+        <li><a href="{{ url_for('select') }}">Selection</a></li>
+      </ul>
+    </div>
+    <!-- CONTENT  -->
+
+    <div class="main">
+      <div class="hero">
+        <div class="container">
+          <div class="title">
+            <h1>About Us</h1>
+          </div>
+          <h2>Empowering Your Style</h2>
+        </div>
+      </div>
+      <div class="content-about">
+        <p>
+          At Outfit suggester, we believe that fashion is more than just
+          clothing , it's an expression of who you are. <br />
+          Our mission is to simplify your daily style decisions while helping
+          you feel confident and authentic in every outfit you wear.
+        </p>
+        <br />
+        <p>
+          We’re a passionate team of fashion enthusiasts, tech innovators, and
+          trend-watchers who’ve come together to <br />
+          revolutionize the way you dress. By combining smart algorithms with
+          your unique preferences, we provide outfit suggestions that feel
+          personal, practical, and perfectly you.
+        </p>
+        <br />
+        <h3>Why We Do It:</h3>
+        <br />
+        <p>
+          We know the struggle of staring at your wardrobe, unsure of what to
+          wear. Our goal is to make fashion fun, <br />
+          approachable, and stress-free, so you can focus on living your best
+          life.
+        </p>
+        <br />
+        <h3>How It Works:</h3>
+        <br />
+        <p>
+          1. Share your preferences – your style, favorite colors, and go-to
+          vibes. <br />
+          2. Our intelligent system curates outfits tailored just for you.
+          <br />
+          3. Explore, save, and wear with confidence! <br />
+          <br />
+        </p>
+        <p>
+          Join us on this journey to redefine how you see and experience your
+          wardrobe. Let’s make getting dressed the easiest (and most exciting)
+          part of your day.
+        </p>
+        <!-- <h5> <a href="">[Learn More About Our Process]</a></h5> -->
+      </div>
+    </div>
+
+    <!-- FOOTER  -->
+
+    <div class="footer">
+      <h4>© 2025 All rights reserved.</h4>
+    </div>
+  </body>
+</html>

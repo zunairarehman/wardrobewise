@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outfit Suggestions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Borel&family=Chewy&family=Knewave&family=Matemasie&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <h1>Wardrobe Wise</h1>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('member') }}">Review</a></li>
+        <li><a href="{{ url_for('select') }}">Selection</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      </div>
+      <div class="content">
+        <!-- Display images -->
+        <div class="outfit-gallery">
+          {% for outfit in outfits %}
+          <img
+            src="{{ url_for('static', filename=outfit) }}"
+            alt="Outfit Suggestion"
+          />
+          {% endfor %}
+          <!-- Loops through the outfits list passed from the suggest route in your Python code.-->
+        </div>
+        <button class="btn">
+          <a href="{{ url_for('index') }}">Go to Home</a>
+        </button>
+        <button class="btn">
+          <a href="{{ url_for('select') }}">Make Another Selection</a>
+        </button>
+      </div>
+      <!-- Navigation Links -->
+    </div>
+    <!-- FOOTER  -->
+
+    <div class="footer">
+      <h4>© 2025 All rights reserved.</h4>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Borel&family=Chewy&family=Knewave&family=Matemasie&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+      <h1>Wardrobe Wise</h1>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('member') }}">Review</a></li>
+        <li><a href="{{ url_for('select') }}">Selection</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENT  -->
+
+    <div class="main">
+      <div class="hero">
+        <div class="container">
+          <form action="/suggest" method="POST">
+              <h3 class="select"><b>Select Please! </b></h3>
+              <h3 class="font"><b>Gender: </b></h3>
+              <!-- <label for="male">Male</label>
+              <input type="radio" id="male" name="gender" value="M" />
+              <label for="female">Female</label>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="F"
+              /><br /><br /> -->
+              <select name="gender" class="gender-select">
+                <option value="" class="hidden-option" disabled selected>Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+              
+              
+              <h3 class="font"><b> Occasion: </b></h3>
+              <!-- <label for="casual">Casual</label>
+              <input type="radio" id="casual" name="occassion" value="C" />
+              <label for="formal">Formal</label>
+              <input
+                type="radio"
+                id="formal"
+                name="occassion"
+                value="F"
+              /><br /><br /> -->
+              <select name="occasion" class="occasions-select">
+                <option value="" class="hidden-option" disabled selected>Select Occasion</option>
+                <option value="WBG">Wedding Attire(Bride/Groom)</option>
+                <option value="WG">Wedding Attire(Guests)</option>
+                <option value="CO">Casual Outing</option>
+                <option value="BM">Business Meeting</option>
+                <option value="CPO">Couple Party Outfits</option>
+                <option value="FC">Festival Celebration</option>
+              </select>
+              <!-- <legend><b> Weather: </b></legend>
+              <label for="summer">Summer</label>
+              <input type="radio" id="summer" name="weather" value="S" />
+              <label for="winter">Winter</label>
+              <input
+                type="radio"
+                id="winter"
+                name="weather"
+                value="W"
+              /><br /><br /> -->
+  <br />
+              <button class="btn" type="submit"><a type="savedata">Done</a></button>
+              <button class="btn" type="reset"><a type="reset">Reset</a></button>
+            <br /><br />
+          </form>
+      </div>
+      
+    </div>
+
+    <!-- FOOTER  -->
+
+    <div class="footer">
+      <h4>© 2025 All rights reserved.</h4>
+    </div>
+  </body>
+</html>

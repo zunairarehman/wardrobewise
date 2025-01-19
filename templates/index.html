@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Borel&family=Chewy&family=Knewave&family=Matemasie&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+      <h1>Wardrobe Wise</h1>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('member') }}">Review</a></li>
+        <li><a href="{{ url_for('select') }}">Selection</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTENT  -->
+
+    <div class="main">
+      <div class="hero">
+        <div class="container">
+          <div class="title">
+            <h1>Wardrobe Wise</h1>
+          </div>
+          <h2>Discover Your Perfect Look, Effortlessly</h2>
+        </div>
+      </div>
+        <div class="content">
+      <p>
+        Welcome to your personal outfit suggester! Say goodbye to wardrobe
+        dilemmas and hello to confidence. Whether you're dressing for work, a
+        casual day out, or a special occasion, we tailor recommendations to your
+        unique preferences, style, and needs. With just a few clicks, you’ll
+        unlock curated outfit ideas that match your vibe and the occasion. No
+        more overthinking – just effortlessly stylish options, personalized for
+        you.
+      </p>
+      <ul>
+        <li>Personalized Recommendations</li>
+        <li>Style That Matches Your Vibe </li>
+        <li>Save Time, Look Amazing </li>
+    </ul>
+    Get started today and elevate your style game!
+      <a href="select"> <button class="btn">Start Now</button> </a>
+    </div>
+    <!-- FOOTER  -->
+
+    <div class="footer">
+      <h4>© 2025 All rights reserved.</h4>
+    </div>
+  </body>
+</html>
