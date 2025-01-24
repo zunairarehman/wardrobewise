@@ -9,7 +9,7 @@ def default():
 def index():
     return render_template("index.html")
 
-@app.route("/about")
+@app.route("/abou t")
 def about():        
     return render_template("about.html")
 
